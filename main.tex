@@ -1,0 +1,106 @@
+%Template para TCC CIC UFRGS
+%Author: Lucas Schnorr (Adaptado para overleaf por Rubens dos Santos)
+
+% exemplo genérico de uso da classe iiufrgs.cls
+% $Id: iiufrgs.tex,v 1.1.1.1 2005/01/18 23:54:42 avila Exp $
+% 
+% This is an example file and is hereby explicitly put in the
+% public domain.
+% 
+\documentclass[ppgc,tc,english]{iiufrgs}
+% Para usar o modelo, deve-se informar o programa e o tipo de documento.
+% Programas :
+% * ppgc      -- Programa de Pós Graduação em Computação
+% 
+% Tipos de Documento:
+% * tc                -- Trabalhos de Conclusão (apenas cic e ecp)
+% 
+% Outras Opções:
+% * english    -- para textos em inglês
+% * openright  -- Força início de capítulos em páginas ímpares (padrão da
+% biblioteca)
+% * oneside    -- Desliga frente-e-verso
+% * nominatalocal -- Lê os dados da nominata do arquivo nominatalocal.def
+
+
+% Use unicode
+\usepackage[utf8]{inputenc}   % pacote para acentuação
+
+% Necessário para incluir figuras
+\usepackage{graphicx}         % pacote para importar figuras
+
+\usepackage{times}            % pacote para usar fonte Adobe Times
+% \usepackage{palatino}
+% \usepackage{mathptmx}       % p/ usar fonte Adobe Times nas fórmulas
+
+\usepackage[alf,abnt-emphasize=bf]{abntex2cite}	% pacote para usar citações abnt
+
+\usepackage{xcolor}
+
+\newcommand{\tlts}[1]{{\color{red}#1}}
+\newcommand{\aluno}[1]{{\color{blue}#1}}
+\newcommand{\todo}[1]{{\color{orange}#1}}
+
+
+% 
+% Informações gerais
+% 
+\title{Title}
+
+\author{Surname}{Name}
+
+\advisor[Prof.~Dr.]{da Silveira}{Thiago Lopes Trugillo}
+
+% 
+\keyword{First keyword}
+\keyword{Second keyword}
+\keyword{Third keyword}
+\keyword{Fourth keyword}
+
+% 
+\begin{document} 
+
+
+
+\maketitle
+
+\begin{abstract}
+Abstract.
+    \tlts{Thiago}
+    \aluno{Aluno}
+    \todo{TODO}
+
+\end{abstract}
+\tableofcontents
+\chapter{Introduction}
+
+
+\chapter{Related Work}
+
+
+\chapter{Proposed Methodology}
+
+\section{Proposed Schedule}
+
+\begin{table}[h]
+    \caption{Proposed schedule}
+    % OBS: não use \begin{center}, pois este aumenta o espaçamento entre a caption/legend e a tabela
+    % Para figuras, a aparência é melhor com o espaçamento extra
+    \centering
+        \begin{tabular}{c|c|c|c|c|c|c|c}
+          \hline
+          {Activity}  &   \textit{X}  &   \textit{Y}  &   \textit{Z}  &   \textit{W}  &   \textit{X}  &   \textit{Y}  &   \textit{Z}\\
+          \hline
+                  & $\times$& & & & & &   \\
+                  & $\times$& & & & & &   \\
+                  & $\times$& & & & & &   \\
+          \hline
+        \end{tabular}
+     \label{tbl:ex1}
+\end{table}
+
+
+\bibliographystyle{abntex2-alf}
+\bibliography{biblio}
+
+\end{document}
